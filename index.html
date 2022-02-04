@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <div id="root" class="m-3">
+    <div v-show="emailList.length === rangeList" id="root" class="m-3">
       <ul class="list-unstyled">
         <li class="pb-2" v-for="(email, index ) in emailList">
           <span class="pe-1">{{ index + 1 }})</span> {{ email }}

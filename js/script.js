@@ -29,9 +29,3 @@ const root = new Vue({
   },
 });
 
-//     getListEmail(array, maxNumber) {
-//       do {
-//         this.getEmail();
-//       } while (array.length < maxNumber);
-//     },
-//   },
