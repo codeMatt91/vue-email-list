@@ -6,18 +6,22 @@ Vue.config.devtools = true;
 const root = new Vue({
   el: "#root",
   data: {
-    emailList: [],
+     emailList: [],
+     rangeList: 10,
   },
   methods: {
     getEmail() {
       axios
         .get("https://flynn.boolean.careers/exercises/api/random/mail")
         .then((res) => {
-          console.log(res.data);
+           this.emailList.push(res.data.response);
         });
     },
-    created() {
-      this.getEmail();
+     getListEmail(array, maxNumber) {
+        do {
+           this.getEmail();
+        } while (array <= maxNumber);
     },
-  },
+   },
+  
 });
